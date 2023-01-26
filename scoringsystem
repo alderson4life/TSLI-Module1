@@ -1,0 +1,673 @@
+import java.util.Scanner;
+
+public class scoringsystem {
+    public static void main (String[] args) {
+        System.out.println("Welcome to scoring system");
+        System.out.println(" ");
+        System.out.println("General Rules");
+        System.out.println("-5 Events are set for Teams and Individuals");
+        System.out.println("-There can only be 5 Participants in a team");
+        System.out.println("-Teams and Individual Participants will participate in 5 Events");
+        System.out.println(" ");
+        System.out.println("***Ranking System for teams and individuals that will compete in 5 different events***");
+        System.out.println("Rank 1 gives 20 points");
+        System.out.println("Rank 2 gives 15 points");
+        System.out.println("Rank 3 gives 10 points");
+        System.out.println("Rank 4 gives  5 points");
+        System.out.println("Rank 5 and lower will not get any point for individual competition.");
+        System.out.println(" ");
+
+        int rank1=20,rank2=15,rank3=10,rank4=5;
+
+        Scanner scan = new Scanner(System.in);
+
+        String event1, event2, event3, event4, event5;
+
+        System.out.println("Enter name of event 1 : ");
+        event1 = scan.nextLine();
+        System.out.println("Enter name of event 2 : ");
+        event2 = scan.nextLine();
+        System.out.println("Enter name of event 3 : ");
+        event3 = scan.nextLine();
+        System.out.println("Enter name of event 4 : ");
+        event4 = scan.nextLine();
+        System.out.println("Enter name of event 5 : ");
+        event5 = scan.nextLine();
+
+        System.out.println("5 events you entered are " + event1 + "," + event2 + "," + event3 + "," + event4 + " and " + event5 + ".");
+        System.out.println(" ");
+
+        System.out.println("Enter 1 to compete as a team and 2 as an individual.");
+        int option = scan.nextInt();
+
+        if ( option == 1 ){
+            System.out.println("You chose to compete as a team.You have to enter four names.");
+            System.out.println(" ");
+
+            //Getting 4 Team Names
+            Scanner getTeamName = new Scanner(System.in);
+
+            System.out.println("Enter First team name : ");
+            String teamName1 = getTeamName.nextLine();
+            System.out.println("First team name is " + teamName1 + ".");
+
+            System.out.println("Enter second team name : ");
+            String teamName2 = getTeamName.nextLine();
+            System.out.println("Second team name is " + teamName2 + ".");
+
+            System.out.println("Enter third team name : ");
+            String teamName3 = getTeamName.nextLine();
+            System.out.println("Third team name is " + teamName3 + ".");
+
+            System.out.println("Enter fourth team name : ");
+            String teamName4 = getTeamName.nextLine();
+            System.out.println("Fourth team name is " + teamName4 + ".");
+
+            //Getting 5 Teammates For Each Team ( Four Teams / 20 Teammates )
+
+            System.out.println("Enter 5 teammate names for team1.");
+
+            //First Team
+            Scanner input1 = new Scanner(System.in);
+            String TM11,TM12,TM13,TM14,TM15;
+            System.out.println("For first team\n");
+            System.out.println("First teammate name : ");
+            TM11 = input1.nextLine();
+            System.out.println("Second teammate name : ");
+            TM12 = input1.nextLine();
+            System.out.println("Third teammate name : ");
+            TM13 = input1.nextLine();
+            System.out.println("Fourth teammate name : ");
+            TM14 = input1.nextLine();
+            System.out.println("Fifth teammate name : ");
+            TM15 = input1.nextLine();
+
+            System.out.println("Teammates of first team are " + TM11 + ", " + TM12 + ", " + TM13 + ", " + TM14 + ", and " + TM15 + ".");
+
+            //Second team
+            Scanner input2 = new Scanner(System.in);
+            String TM21,TM22,TM23,TM24,TM25;
+            System.out.println("For second team\n");
+            System.out.println("First teammate name : ");
+            TM21 = input2.nextLine();
+            System.out.println("Second teammate name : ");
+            TM22 = input2.nextLine();
+            System.out.println("Third teammate name : ");
+            TM23 = input2.nextLine();
+            System.out.println("Fourth teammate name : ");
+            TM24 = input2.nextLine();
+            System.out.println("Fifth teammate name : ");
+            TM25 = input2.nextLine();
+
+            System.out.println("Teammates of second team are " + TM21 + ", " + TM22 + ", " + TM23 + ", " + TM24 + ", and " + TM25 + ".");
+
+            //Third team
+            Scanner input3 = new Scanner(System.in);
+            String TM31,TM32,TM33,TM34,TM35;
+            System.out.println("For third team\n");
+            System.out.println("First teammate name : ");
+            TM31 = input3.nextLine();
+            System.out.println("Second teammate name : ");
+            TM32 = input3.nextLine();
+            System.out.println("Third teammate name : ");
+            TM33 = input3.nextLine();
+            System.out.println("Fourth teammate name : ");
+            TM34 = input3.nextLine();
+            System.out.println("Fifth teammate name : ");
+            TM35 = input3.nextLine();
+
+            System.out.println("Teammates of third team are " + TM31 + ", " + TM32 + ", " + TM33 + ", " + TM34 + ", and " + TM35 + ".");
+
+            //Fourth team
+            Scanner input4 = new Scanner(System.in);
+            String TM41,TM42,TM43,TM44,TM45;
+            System.out.println("For fourth team\n");
+            System.out.println("First teammate name : ");
+            TM41 = input4.nextLine();
+            System.out.println("Second teammate name : ");
+            TM42 = input4.nextLine();
+            System.out.println("Third teammate name : ");
+            TM43 = input4.nextLine();
+            System.out.println("Fourth teammate name : ");
+            TM44 = input4.nextLine();
+            System.out.println("Fifth teammate name : ");
+            TM45 = input4.nextLine();
+
+            System.out.println("Teammates of fourth team are " + TM41 + ", " + TM42 + ", " + TM43 + ", " + TM44 + ", and " + TM45 + ".");
+
+            //getting rank points
+            //
+            //for event1
+
+            int T1RP1 = 0,T2RP1 = 0,T3RP1 = 0,T4RP1 =0; // (RP = rank points)
+            Scanner scans1 = new Scanner(System.in);
+
+            //getting score of team 1 in event 1
+            System.out.println("Enter rank for team 1 in event 1 : ");
+            T1RP1 = scans1.nextInt();
+            if (T1RP1 == 1){
+                T1RP1 = rank1;
+                System.out.println("Team 1 got 20 points.");
+            } else if (T1RP1 == 2) {
+                T1RP1 = rank2;
+                System.out.println("Team 1 got 15 points");
+            } else if (T1RP1 == 3) {
+                T1RP1 = rank3;
+                System.out.println("Team 1 got 10 points");
+            } else if (T1RP1 == 4) {
+                T1RP1 = rank4;
+                System.out.println("Team 1 got 5 points");
+            }
+
+            //getting score of team 2 in event 1
+            System.out.println("Enter rank for team 2 in event 1 : ");
+            T2RP1 = scans1.nextInt();
+            if (T2RP1 == 1){
+                T2RP1 = rank1;
+                System.out.println("Team 2 got 20 points");
+            } else if (T2RP1 == 2) {
+                T2RP1 = rank2;
+                System.out.println("Team 2 got 15 points");
+            } else if (T2RP1 == 3) {
+                T2RP1 = rank3;
+                System.out.println("Team 2 got 10 points");
+            } else if (T2RP1 == 4) {
+                T2RP1 = rank4;
+                System.out.println("Team 2 got 5 points");
+            }
+
+            //getting score of team 3 in event 1
+            System.out.println("Enter rank for team 3 in event 1 : ");
+            T3RP1 = scans1.nextInt();
+            if (T3RP1 == 1){
+                T3RP1 = rank1;
+                System.out.println("Team 3 got 20 points");
+            } else if (T3RP1 == 2) {
+                T3RP1 = rank2;
+                System.out.println("Team 3 got 15 points");
+            } else if (T3RP1 == 3) {
+                T3RP1 = rank3;
+                System.out.println("Team 3 got 10 points");
+            } else if (T3RP1 == 4) {
+                T3RP1 = rank4;
+                System.out.println("Team 3 got 5 points");
+            }
+
+            //getting score of team 4 in event 1
+            System.out.println("Enter rank for team 4 in event 1 : ");
+            T4RP1 = scans1.nextInt();
+            if (T4RP1 == 1){
+                T4RP1 = rank1;
+                System.out.println("Team 4 got 20 points");
+            } else if (T4RP1 == 2) {
+                T4RP1 = rank2;
+                System.out.println("Team 4 got 15 points");
+            } else if (T4RP1 == 3) {
+                T4RP1 = rank3;
+                System.out.println("Team 4 got 10 points");
+            } else if (T4RP1 == 4) {
+                T4RP1 = rank4;
+                System.out.println("Team 4 got 5 points");
+            }
+
+            //for event2
+            int T1RP2 = 0,T2RP2 = 0,T3RP2 = 0,T4RP2 =0;
+            Scanner scans2 = new Scanner(System.in);
+
+            //getting score of team 1 in event 2
+            System.out.println("Enter rank for team 1 in event 2 : ");
+            T1RP2 = scans2.nextInt();
+            if (T1RP2 == 1){
+                T1RP2 = rank1;
+                System.out.println("Team 1 got 20 points");
+            } else if (T1RP2 == 2) {
+                T1RP2 = rank2;
+                System.out.println("Team 1 got 15 points");
+            } else if (T1RP2 == 3) {
+                T1RP2 = rank3;
+                System.out.println("Team 1 got 10 points");
+            } else if (T1RP2 == 4) {
+                T1RP2 = rank4;
+                System.out.println("Team 1 got 5 points");
+            }
+
+            //getting score of team 2 in event 2
+            System.out.println("Enter rank for team 2 in event 2 : ");
+            T2RP2 = scans2.nextInt();
+            if (T2RP2 == 1){
+                T2RP2 = rank1;
+                System.out.println("Team 2 got 20 points");
+            } else if (T2RP2 == 2) {
+                T2RP2 = rank2;
+                System.out.println("Team 2 got 15 points");
+            } else if (T2RP2 == 3) {
+                T2RP2 = rank3;
+                System.out.println("Team 2 got 10 points");
+            } else if (T2RP2 == 4) {
+                T2RP2 = rank4;
+                System.out.println("Team 2 got 5 points");
+            }
+
+            //getting score of team 3 in event 2
+            System.out.println("Enter rank for team 3 in event 2 : ");
+            T3RP2 = scans2.nextInt();
+            if (T3RP2 == 1){
+                T3RP2 = rank1;
+                System.out.println("Team 3 got 20 points");
+            } else if (T3RP2 == 2) {
+                T3RP2 = rank2;
+                System.out.println("Team 3 got 15 points");
+            } else if (T3RP2 == 3) {
+                T3RP2 = rank3;
+                System.out.println("Team 3 got 10 points");
+            } else if (T3RP2 == 4) {
+                T3RP2 = rank4;
+                System.out.println("Team 3 got 5 points");
+            }
+
+            //getting score of team 4 in event 2
+            System.out.println("Enter rank for team 4 in event 2 : ");
+            T3RP2 = scans2.nextInt();
+            if (T4RP2 == 1){
+                T4RP2 = rank1;
+                System.out.println("Team 4 got 20 points");
+            } else if (T4RP2 == 2) {
+                T4RP2 = rank2;
+                System.out.println("Team 4 got 15 points");
+            } else if (T4RP2 == 3) {
+                T4RP2 = rank3;
+                System.out.println("Team 4 got 10 points");
+            } else if (T4RP2 == 4) {
+                T4RP2 = rank4;
+                System.out.println("Team 4 got 5 points");
+            }
+
+            //event 3
+            int T1RP3 = 0,T2RP3 = 0,T3RP3 = 0,T4RP3 =0;
+            Scanner scans3 = new Scanner(System.in);
+
+            //getting score of team 1 in event 3
+            System.out.println("Enter rank for team 1 in event 3 : ");
+            T1RP3 = scans3.nextInt();
+            if (T1RP3 == 1){
+                T1RP3 = rank1;
+                System.out.println("Team 1 got 20 points");
+            } else if (T1RP3 == 2) {
+                T1RP3 = rank2;
+                System.out.println("Team 1 got 15 points");
+            } else if (T1RP3 == 3) {
+                T1RP3 = rank3;
+                System.out.println("Team 1 got 10 points");
+            } else if (T1RP3 == 4) {
+                T1RP3 = rank4;
+                System.out.println("Team 1 got 5 points");
+            }
+
+            //getting score of team 2 in event 3
+            System.out.println("Enter rank for team 2 in event 3 : ");
+            T2RP3 = scans3.nextInt();
+            if (T2RP3 == 1){
+                T2RP3 = rank1;
+                System.out.println("Team 2 got 20 points");
+            } else if (T2RP3 == 2) {
+                T2RP3 = rank2;
+                System.out.println("Team 2 got 15 points");
+            } else if (T2RP3 == 3) {
+                T2RP3 = rank3;
+                System.out.println("Team 2 got 10 points");
+            } else if (T2RP3 == 4) {
+                T2RP3 = rank4;
+                System.out.println("Team 2 got 5 points");
+            }
+
+            //getting score of team 3 in event 3
+            System.out.println("Enter rank for team 3 in event 3 : ");
+            T3RP3 = scans3.nextInt();
+            if (T3RP3 == 1){
+                T3RP3 = rank1;
+                System.out.println("Team 3 got 20 points");
+            } else if (T3RP3 == 2) {
+                T3RP3 = rank2;
+                System.out.println("Team 3 got 15 points");
+            } else if (T3RP3 == 3) {
+                T3RP3 = rank3;
+                System.out.println("Team 3 got 10 points");
+            } else if (T3RP3 == 4) {
+                T3RP3 = rank4;
+                System.out.println("Team 3 got 5 points");
+            }
+
+            //getting score of team 4 in event 3
+            System.out.println("Enter rank for team 4 in event 3 : ");
+            T4RP3 = scans3.nextInt();
+            if (T4RP3 == 1){
+                T4RP3 = rank1;
+                System.out.println("Team 4 got 20 points");
+            } else if (T4RP3 == 2) {
+                T4RP3 = rank2;
+                System.out.println("Team 4 got 15 points");
+            } else if (T4RP3 == 3) {
+                T4RP3 = rank3;
+                System.out.println("Team 4 got 10 points");
+            } else if (T4RP3 == 4) {
+                T4RP3 = rank4;
+                System.out.println("Team 4 got 5 points");
+            }
+
+            //event 4
+            int T1RP4 = 0,T2RP4 = 0,T3RP4 = 0,T4RP4 =0;
+            Scanner scans4 = new Scanner(System.in);
+
+            //getting score of team 1 in event 4
+            System.out.println("Enter rank for team 1 in event 4 : ");
+            T1RP4 = scans4.nextInt();
+            if (T1RP4 == 1){
+                T1RP4 = rank1;
+                System.out.println("Team 1 got 20 points");
+            } else if (T1RP4 == 2) {
+                T1RP4 = rank2;
+                System.out.println("Team 1 got 15 points");
+            } else if (T1RP4 == 3) {
+                T1RP4 = rank3;
+                System.out.println("Team 1 got 10 points");
+            } else if (T1RP4 == 4) {
+                T1RP4 = rank4;
+                System.out.println("Team 1 got 5 points");
+            }
+
+            //getting score of team 2 in event 4
+            System.out.println("Enter rank for team 2 in event 4 : ");
+            T2RP4 = scans4.nextInt();
+            if (T2RP4 == 1){
+                T2RP4 = rank1;
+                System.out.println("Team 2 got 20 points");
+            } else if (T2RP4 == 2) {
+                T2RP4 = rank2;
+                System.out.println("Team 2 got 15 points");
+            } else if (T2RP4 == 3) {
+                T2RP4 = rank3;
+                System.out.println("Team 2 got 10 points");
+            } else if (T2RP4 == 4) {
+                T2RP4 = rank4;
+                System.out.println("Team 2 got 5 points");
+            }
+
+            //getting score of team 3 in event 4
+            System.out.println("Enter rank for team 3 in event 4 : ");
+            T3RP4 = scans4.nextInt();
+            if (T3RP4 == 1){
+                T3RP4 = rank1;
+                System.out.println("Team 3 got 20 points");
+            } else if (T3RP4 == 2) {
+                T3RP4 = rank2;
+                System.out.println("Team 3 got 15 points");
+            } else if (T3RP4 == 3) {
+                T3RP4 = rank3;
+                System.out.println("Team 3 got 10 points");
+            } else if (T3RP4 == 4) {
+                T3RP4 = rank4;
+                System.out.println("Team 3 got 5 points");
+            }
+
+            //getting score of team 4 in event 4
+            System.out.println("Enter rank for team 4 in event 4 : ");
+            T4RP4 = scans4.nextInt();
+            if (T4RP4 == 1){
+                T4RP4 = rank1;
+                System.out.println("Team 4 got 20 points");
+            } else if (T4RP4 == 2) {
+                T4RP4 = rank2;
+                System.out.println("Team 4 got 15 points");
+            } else if (T4RP4 == 3) {
+                T4RP4 = rank3;
+                System.out.println("Team 4 got 10 points");
+            } else if (T4RP4 == 4) {
+                T4RP4 = rank4;
+                System.out.println("Team 4 got 5 points");
+            }
+
+            //event 5
+            int T1RP5 = 0,T2RP5 = 0,T3RP5 = 0,T4RP5 =0;
+            Scanner scans5 = new Scanner(System.in);
+
+            //getting score of team 1 in event 5
+            System.out.println("Enter rank for team 1 in event 5 : ");
+            T1RP5 = scans5.nextInt();
+            if (T1RP5 == 1){
+                T1RP5 = rank1;
+                System.out.println("Team 1 got 20 points");
+            } else if (T1RP5 == 2) {
+                T1RP5 = rank2;
+                System.out.println("Team 1 got 15 points");
+            } else if (T1RP5 == 3) {
+                T1RP5 = rank3;
+                System.out.println("Team 1 got 10 points");
+            } else if (T1RP5 == 4) {
+                T1RP5 = rank4;
+                System.out.println("Team 1 got 5 points");
+            }
+
+            //getting score of team 2 in event 5
+            System.out.println("Enter rank for team 2 in event 5 : ");
+            T2RP5 = scans5.nextInt();
+            if (T2RP5 == 1){
+                T2RP5 = rank1;
+                System.out.println("Team 2 got 20 points");
+            } else if (T2RP5 == 2) {
+                T2RP5 = rank2;
+                System.out.println("Team 2 got 15 points");
+            } else if (T2RP5 == 3) {
+                T2RP5 = rank3;
+                System.out.println("Team 2 got 10 points");
+            } else if (T2RP5 == 4) {
+                T2RP5 = rank4;
+                System.out.println("Team 2 got 5 points");
+            }
+
+            //getting score of team 3 in event 5
+            System.out.println("Enter rank for team 3 in event 5 : ");
+            T3RP5 = scans5.nextInt();
+            if (T3RP5 == 1){
+                T3RP5 = rank1;
+                System.out.println("Team 3 got 20 points");
+            } else if (T3RP5 == 2) {
+                T3RP5 = rank2;
+                System.out.println("Team 3 got 15 points");
+            } else if (T3RP5 == 3) {
+                T3RP5 = rank3;
+                System.out.println("Team 3 got 10 points");
+            } else if (T3RP5 == 4) {
+                T3RP5 = rank4;
+                System.out.println("Team 3 got 5 points");
+            }
+
+            //getting score of team 4 in event 5
+            System.out.println("Enter rank for team 4 in event 5 : ");
+            T4RP5 = scans5.nextInt();
+            if (T4RP5 == 1){
+                T4RP5 = rank1;
+                System.out.println("Team 4 got 20 points");
+            } else if (T4RP5 == 2) {
+                T4RP5 = rank2;
+                System.out.println("Team 4 got 15 points");
+            } else if (T4RP5 == 3) {
+                T4RP5 = rank3;
+                System.out.println("Team 4 got 10 points");
+            } else if (T4RP5 == 4) {
+                T4RP5 = rank4;
+                System.out.println("Team 4 got 5 points");
+            }
+
+            System.out.println(" ");
+
+            //getting total points of teams in 5 events
+
+            int team1Total = 0;
+            team1Total = T1RP1 + T1RP2 + T1RP3 + T1RP4 + T1RP5;
+            System.out.println("First team got " + team1Total + " points.");
+
+            int team2Total = 0;
+            team2Total = T2RP1 + T2RP2 + T2RP3 + T2RP4 + T2RP5;
+            System.out.println("Second team got " + team2Total + " points.");
+
+            int team3Total = 0;
+            team3Total = T3RP1 + T3RP2 + T3RP3 + T3RP4 + T3RP5;
+            System.out.println("Third team got " + team3Total + " points.");
+
+            int team4Total = 0;
+            team4Total = T4RP1 + T4RP2 + T4RP3 + T4RP4 + T4RP5;
+            System.out.println("Fourth team got " + team4Total + " points.");
+
+            System.out.println(" ");
+
+            if ( team1Total > team2Total && team1Total > team3Total && team1Total > team4Total ){
+                System.out.println("First team got greatest points in 5 events combined.");
+                System.out.println("First team is THE WINNER !!!");
+            }
+            else if ( team2Total > team1Total && team2Total > team3Total && team2Total > team4Total ){
+                System.out.println("Second team got greatest points in 5 events combined.");
+                System.out.println("Second team is THE WINNER !!!");
+            }
+            else if ( team3Total > team1Total && team3Total > team2Total && team3Total > team4Total ){
+                System.out.println("Third team got greatest points in 5 events combined.");
+                System.out.println("Third team is THE WINNER !!!");
+            }
+            else if ( team4Total > team1Total && team4Total > team2Total && team4Total > team3Total ){
+                System.out.println("Fourth team got greatest points in 5 events combined.");
+                System.out.println("Fourth team is THE WINNER !!!");
+            }
+            System.out.println("Program ends.Thank you!!!");
+            }
+        //Start for individual option using else / if part is finished
+        else {
+                System.out.println("You chose to compete as an individual.");
+                System.out.println(" ");
+
+                //Getting Individual Player Names / Maximum is 20
+                int n;
+                Scanner getPlayerName = new Scanner(System.in);
+                System.out.println("Maximum individual players allowed : 20 ");
+                System.out.println("Enter the number of players  : ");
+                n = getPlayerName.nextInt();
+
+                String[] players = new String[20];
+                System.out.println("Enter names of the players : ");
+
+                for (int i=0;i<n;i++){
+                    players[i] = getPlayerName.next();
+                }
+                System.out.println("Names of players are ");
+                for (int i=0;i<n;i++){
+                    System.out.println(players[i]);
+                }
+
+                //getting rank points from players for event 1
+                int P1E1 = 0,P2E1 = 0,P3E1 = 0,P4E1 =0;
+                Scanner rankPtOfPlayer1 = new Scanner(System.in);
+                int[] rankOfPlayer1 = new int[20]; //array to store ranks of players
+                for (int i=0;i<n;i++) {
+                    System.out.println("Enter rank of player " + players[i] + " for event 1 : ");
+                    rankOfPlayer1[i] = rankPtOfPlayer1.nextInt();
+
+                    if (rankOfPlayer1[i] == 1){
+                        System.out.println(players[i] + " got " + rank1 + " points for event 1.");
+                    } else if (rankOfPlayer1[i] == 2) {
+                        System.out.println(players[i] + " got " + rank2 + " points for event 1.");
+                    } else if (rankOfPlayer1[i] == 3) {
+                        System.out.println(players[i] + " got " + rank3 + " points for event 1.");
+                    } else if (rankOfPlayer1[i] == 4) {
+                        System.out.println(players[i] + " got " + rank4 + " points for event 1.");
+                    } else {
+                        System.out.println("Rank 5 and lower will not get any point.");
+                    }
+                }
+
+            //getting rank points from players for event 2
+            int P1E2 = 0,P2E2 = 0,P3E2 = 0,P4E2 =0;
+            Scanner rankPtOfPlayer2 = new Scanner(System.in);
+            int[] rankOfPlayer2 = new int[20]; //array to store ranks of players
+            for (int i=0;i<n;i++) {
+                System.out.println("Enter rank of player " + players[i] + " for event 2 : ");
+                rankOfPlayer2[i] = rankPtOfPlayer2.nextInt();
+
+                if (rankOfPlayer2[i] == 1){
+                    System.out.println(players[i] + " got " + rank1 + " points for event 2.");
+                } else if (rankOfPlayer2[i] == 2) {
+                    System.out.println(players[i] + " got " + rank2 + " points for event 2.");
+                } else if (rankOfPlayer2[i] == 3) {
+                    System.out.println(players[i] + " got " + rank3 + " points for event 2.");
+                } else if (rankOfPlayer2[i] == 4) {
+                    System.out.println(players[i] + " got " + rank4 + " points for event 2.");
+                } else {
+                    System.out.println("Rank 5 and lower will not get any point.");
+                }
+            }
+
+            //getting rank points from players for event 3
+            int P1E3 = 0,P2E3 = 0,P3E3 = 0,P4E3 =0;
+            Scanner rankPtOfPlayer3 = new Scanner(System.in);
+            int[] rankOfPlayer3 = new int[20]; //array to store ranks of players
+            for (int i=0;i<n;i++) {
+                System.out.println("Enter rank of player " + players[i] + " for event 3 : ");
+                rankOfPlayer3[i] = rankPtOfPlayer3.nextInt();
+
+                if (rankOfPlayer3[i] == 1){
+                    System.out.println(players[i] + " got " + rank1 + " points for event 3.");
+                } else if (rankOfPlayer3[i] == 2) {
+                    System.out.println(players[i] + " got " + rank2 + " points for event 3.");
+                } else if (rankOfPlayer3[i] == 3) {
+                    System.out.println(players[i] + " got " + rank3 + " points for event 3.");
+                } else if (rankOfPlayer3[i] == 4) {
+                    System.out.println(players[i] + " got " + rank4 + " points for event 3.");
+                } else {
+                    System.out.println("Rank 5 and lower will not get any point.");
+                }
+            }
+
+            //getting rank points from players for event 4
+            int P1E4 = 0,P2E4 = 0,P3E4 = 0,P4E4 =0;
+            Scanner rankPtOfPlayer4 = new Scanner(System.in);
+            int[] rankOfPlayer4 = new int[20]; //array to store ranks of players
+            for (int i=0;i<n;i++) {
+                System.out.println("Enter rank of player " + players[i] + " for event 4 : ");
+                rankOfPlayer4[i] = rankPtOfPlayer4.nextInt();
+
+                if (rankOfPlayer4[i] == 1){
+                    System.out.println(players[i] + " got " + rank1 + " points for event 4.");
+                } else if (rankOfPlayer4[i] == 2) {
+                    System.out.println(players[i] + " got " + rank2 + " points for event 4.");
+                } else if (rankOfPlayer4[i] == 3) {
+                    System.out.println(players[i] + " got " + rank3 + " points for event 4.");
+                } else if (rankOfPlayer4[i] == 4) {
+                    System.out.println(players[i] + " got " + rank4 + " points for event 4.");
+                } else {
+                    System.out.println("Rank 5 and lower will not get any point.");
+                }
+            }
+
+            //getting rank points from players for event 5
+            int P1E5 = 0,P2E5 = 0,P3E5 = 0,P4E5 =0;
+            Scanner rankPtOfPlayer5 = new Scanner(System.in);
+            int[] rankOfPlayer5 = new int[20]; //array to store ranks of players
+            for (int i=0;i<n;i++) {
+                System.out.println("Enter rank of player " + players[i] + " for event 5 : ");
+                rankOfPlayer3[i] = rankPtOfPlayer5.nextInt();
+
+                if (rankOfPlayer5[i] == 1){
+                    System.out.println(players[i] + " got " + rank1 + " points for event 5.");
+                } else if (rankOfPlayer5[i] == 2) {
+                    System.out.println(players[i] + " got " + rank2 + " points for event 5.");
+                } else if (rankOfPlayer5[i] == 3) {
+                    System.out.println(players[i] + " got " + rank3 + " points for event 5.");
+                } else if (rankOfPlayer5[i] == 4) {
+                    System.out.println(players[i] + " got " + rank4 + " points for event 5.");
+                } else {
+                    System.out.println("Rank 5 and lower will not get any point.");
+                }
+            } //Finished getting rank points from individual players
+
+        }
+        }
+    }
+
+
